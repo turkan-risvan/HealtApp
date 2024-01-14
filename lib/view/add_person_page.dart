@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:healt_app/view/common/common_text_field.dart';
-import 'package:healt_app/viewmodel/add_character_viewmodel.dart';
+import 'package:healt_app/viewmodel/add_person_viewmodel.dart';
+
 import 'package:provider/provider.dart';
  
-class AddCharacterPage extends StatelessWidget {
+class AddPersonPage extends StatelessWidget {
   TextEditingController _hastaneAdiController = TextEditingController();
   TextEditingController _doktorAdiController = TextEditingController();
  TextEditingController _poliklinikController = TextEditingController();
   TextEditingController _muayeneController = TextEditingController();
-  AddCharacterPage({super.key});
+  AddPersonPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Karakter Ekle"),
+        title: Text("Randevu Ekle"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -32,7 +33,7 @@ class AddCharacterPage extends StatelessWidget {
                 _buildMuayeneTextField(),
               ],
             ),
-            _buildAddCharacterButton(context),
+            _buildAddPersonButton(context),
           ],
         ),
       ),
@@ -67,15 +68,15 @@ class AddCharacterPage extends StatelessWidget {
       label: "Muayene",
     );
   }
-  Widget _buildAddCharacterButton(BuildContext context) {
-    AddCharacterViewModel viewModel = Provider.of(
+  Widget _buildAddPersonButton(BuildContext context) {
+    AddPersonViewModel viewModel = Provider.of(
       context,
       listen: false,
     );
     return ElevatedButton(
-      child: Text("Karakter Ekle"),
+      child: Text("Randevu Ekle"),
       onPressed: () {
-        viewModel.addCharacter(
+        viewModel.addPerson(
           context,
           _hastaneAdiController.text.trim(),
           _doktorAdiController.text.trim(),

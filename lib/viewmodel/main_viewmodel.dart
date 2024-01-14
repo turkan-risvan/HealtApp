@@ -1,49 +1,50 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:healt_app/model/character.dart';
-import 'package:healt_app/view/add_character_page.dart';
-import 'package:healt_app/viewmodel/add_character_viewmodel.dart';
+import 'package:healt_app/model/person.dart';
+import 'package:healt_app/view/add_person_page.dart';
+
+import 'package:healt_app/viewmodel/add_person_viewmodel.dart';
 import 'package:provider/provider.dart';
  
 class MainViewModel with ChangeNotifier {
   FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  List<Character> _characters = [];
+  List<Person> _persons = [];
 
 
-  List<Character> get characters => _characters;
+  List<Person> get persons => _persons;
 
   MainViewModel(){
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      _getCharacters();
+      _getPersons();
     });
   }
 
-  void _getCharacters() async {
+  void _getPersons() async {
     QuerySnapshot<Map<String, dynamic>> snapshot =
-        await _firestore.collection("characters").get();
+        await _firestore.collection("persons").get();
 
     for (QueryDocumentSnapshot<Map<String, dynamic>> documentSnapshot
         in snapshot.docs) {
-      Character character = Character.fromMap(
+      Person person = Person.fromMap(
         documentSnapshot.id,
         documentSnapshot.data(),
       );
-      _characters.add(character);
+      _persons.add(person);
     }
     notifyListeners();
   }
 
-  void openAddCharacterPage(BuildContext context) {
+  void openAddPersonPage(BuildContext context) {
     MaterialPageRoute pageRoute = MaterialPageRoute(
       builder: (context) => ChangeNotifierProvider(
-        create: (context) => AddCharacterViewModel(),
-        child: AddCharacterPage(),
+        create: (context) => AddPersonViewModel(),
+        child: AddPersonPage(),
       ),
     );
     Navigator.push(context, pageRoute).then((value){
-      _characters.clear();
-      _getCharacters();
+      _persons.clear();
+      _getPersons();
     });
   }
 }

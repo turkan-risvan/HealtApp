@@ -13,13 +13,13 @@ class MainPage extends StatelessWidget {
     );
     return Scaffold(
       appBar: AppBar(
-        title: Text("Karakterler"),
+        title: Text("Randevular"),
       ),
       body: _buildBody(),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
-          viewModel.openAddCharacterPage(context);
+          viewModel.openAddPersonPage(context);
         },
       ),
     );
@@ -28,7 +28,7 @@ class MainPage extends StatelessWidget {
   Widget _buildBody() {
     return Consumer<MainViewModel>(
       builder: (context, viewModel, child) => ListView.builder(
-        itemCount: viewModel.characters.length,
+        itemCount: viewModel.persons.length,
         itemBuilder: (BuildContext context, int index) {
           return Card(
        color: Color.fromARGB(255, 10, 255, 226),
@@ -46,7 +46,7 @@ class MainPage extends StatelessWidget {
                   children: [
                     Icon(Icons.local_hospital),
                     SizedBox(width: 8),
-                    Text(viewModel.characters[index].hastaneAdi),
+                    Text(viewModel.persons[index].hastaneAdi),
                   ],
                 ),
                 IconButton(
@@ -61,21 +61,21 @@ class MainPage extends StatelessWidget {
               children: [
                 Icon(Icons.local_hospital),
                 SizedBox(width: 8),
-                Text(viewModel.characters[index].doktorAdi),
+                Text(viewModel.persons[index].doktorAdi),
               ],
             ),
             Row(
               children: [
                 Icon(Icons.info),
                 SizedBox(width: 8),
-                Text(viewModel.characters[index].poliklinik),
+                Text(viewModel.persons[index].poliklinik),
               ],
             ),
             Row(
               children: [
                 Icon(Icons.person),
                 SizedBox(width: 8),
-                Text(viewModel.characters[index].muayene),
+                Text(viewModel.persons[index].muayene),
               ],
             ),
             Row(

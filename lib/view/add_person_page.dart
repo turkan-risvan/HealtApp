@@ -5,17 +5,17 @@ import 'package:healt_app/viewmodel/add_person_viewmodel.dart';
 import 'package:provider/provider.dart';
  
 class AddPersonPage extends StatelessWidget {
-  TextEditingController _hastaneAdiController = TextEditingController();
-  TextEditingController _doktorAdiController = TextEditingController();
- TextEditingController _poliklinikController = TextEditingController();
-  TextEditingController _muayeneController = TextEditingController();
+  final TextEditingController _hastaneAdiController = TextEditingController();
+  final TextEditingController _doktorAdiController = TextEditingController();
+ final TextEditingController _poliklinikController = TextEditingController();
+  final TextEditingController _muayeneController = TextEditingController();
   AddPersonPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Randevu Ekle"),
+        title: const Text("Randevu Ekle"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -25,11 +25,11 @@ class AddPersonPage extends StatelessWidget {
             Column(
               children: [
                 _buildHastaneAdiTextField(),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 _buildDoktorAdiTextField(),
-                 SizedBox(height: 16),
+                 const SizedBox(height: 16),
                    _buildPoliklinikTextField(),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 _buildMuayeneTextField(),
               ],
             ),
@@ -74,7 +74,7 @@ class AddPersonPage extends StatelessWidget {
       listen: false,
     );
     return ElevatedButton(
-      child: Text("Randevu Ekle"),
+      child: const Text("Randevu Ekle"),
       onPressed: () {
         viewModel.addPerson(
           context,

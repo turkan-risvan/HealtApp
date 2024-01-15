@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 
 class SplashViewModel with ChangeNotifier {
   void getSplash(BuildContext context) {
-    Future.delayed(Duration(milliseconds: 3), () {
+    Future.delayed(const Duration(milliseconds: 3), () {
       Navigator.push(
         context,
         MaterialPageRoute(

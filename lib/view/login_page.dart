@@ -1,4 +1,4 @@
-import 'package:animate_do/animate_do.dart';
+ 
 import 'package:flutter/material.dart';
 import 'package:healt_app/view/common/common_text_field.dart';
 import 'package:healt_app/viewmodel/login_viewmodel.dart';
@@ -15,7 +15,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 228, 247, 245),
       appBar: AppBar(
-        title: Text("Giriş Sayfası"),
+        title: const Text("Giriş Sayfası"),
         backgroundColor: Colors.teal, // AppBar rengi
       ),
       body: Padding(
@@ -24,11 +24,11 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             _buildEmailTextField(),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             _buildPasswordTextField(),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             _buildLoginButton(context),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             _buildOpenRegisterButton(context),
           ],
         ),
@@ -66,9 +66,9 @@ class LoginPage extends StatelessWidget {
           _passwordController.text.trim(),
         );
       },
-      child: Text("Giriş Yap"),
+      child:   const Text("Giriş Yap"),
       style: ElevatedButton.styleFrom(
-        primary: Colors.teal, // Button rengi
+        backgroundColor: Colors.teal, // Button rengi
       ),
     );
   }
@@ -83,9 +83,9 @@ class LoginPage extends StatelessWidget {
       onPressed: () {
         viewModel.openRegisterPage(context);
       },
-      child: Text("Hesabınız yok mu? Hesap Oluşturun"),
+      child: const Text("Hesabınız yok mu? Hesap Oluşturun"),
       style: TextButton.styleFrom(
-        primary: Colors.teal, // TextButton rengi
+        foregroundColor: Colors.teal, // TextButton rengi
       ),
     );
   }

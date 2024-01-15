@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
 class MenuScreen extends StatelessWidget {
+  const MenuScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Menu'),
+        title: const Text('Menu'),
       ),
       body: ListView(
         children: [
       
          const Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0),
             child: Row(
               children: [
                 CircleAvatar(
@@ -33,11 +35,11 @@ class MenuScreen extends StatelessWidget {
                       ),   ],
             ),
           ),
-          Divider(),
+          const Divider(),
           GridView.count(
             crossAxisCount: 2,
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             children: [
               buildMenuCard(Icons.access_alarm, 'Çevre Hastane'),
               buildMenuCard(Icons.add_alert, 'Favoriler'),
@@ -62,14 +64,14 @@ class MenuScreen extends StatelessWidget {
     return GestureDetector(
       
       child: Card(
-        color: Color.fromARGB(255, 10, 255, 226),
+        color: const Color.fromARGB(255, 10, 255, 226),
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Row(
            
             children: [
               Icon(icon),
-              SizedBox(width: 8),
+              const SizedBox(width: 8),
               Text(
                 title,
                 style:const TextStyle(

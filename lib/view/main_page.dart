@@ -13,11 +13,11 @@ class MainPage extends StatelessWidget {
     );
     return Scaffold(
       appBar: AppBar(
-        title: Text("Randevular"),
+        title: const Text("Randevular"),
       ),
       body: _buildBody(),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: () {
           viewModel.openAddPersonPage(context);
         },
@@ -31,8 +31,8 @@ class MainPage extends StatelessWidget {
         itemCount: viewModel.persons.length,
         itemBuilder: (BuildContext context, int index) {
           return Card(
-       color: Color.fromARGB(255, 10, 255, 226),
-      margin: EdgeInsets.all(16),
+       color: const Color.fromARGB(255, 10, 255, 226),
+      margin: const EdgeInsets.all(16),
     
       child: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -44,13 +44,13 @@ class MainPage extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Icon(Icons.local_hospital),
-                    SizedBox(width: 8),
+                    const Icon(Icons.local_hospital),
+                    const SizedBox(width: 8),
                     Text(viewModel.persons[index].hastaneAdi),
                   ],
                 ),
                 IconButton(
-                  icon: Icon(Icons.delete),
+                  icon: const Icon(Icons.delete),
                   onPressed: () {
                     // Kartı silme işlemi
                   },
@@ -59,26 +59,26 @@ class MainPage extends StatelessWidget {
             ),
             Row(
               children: [
-                Icon(Icons.local_hospital),
-                SizedBox(width: 8),
+                const Icon(Icons.local_hospital),
+                const SizedBox(width: 8),
                 Text(viewModel.persons[index].doktorAdi),
               ],
             ),
             Row(
               children: [
-                Icon(Icons.info),
-                SizedBox(width: 8),
+                const Icon(Icons.info),
+                const SizedBox(width: 8),
                 Text(viewModel.persons[index].poliklinik),
               ],
             ),
             Row(
               children: [
-                Icon(Icons.person),
-                SizedBox(width: 8),
+                const Icon(Icons.person),
+                const SizedBox(width: 8),
                 Text(viewModel.persons[index].muayene),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Icon(Icons.calendar_today),
                 SizedBox(width: 8),
@@ -88,11 +88,11 @@ class MainPage extends StatelessWidget {
                 ),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Icon(Icons.access_time),
                 SizedBox(width: 8),
-                Text('Saat ve Tarih Bilgisi'),
+                 Text('Saat ve Tarih Bilgisi'),
               ],
             ),
           ],

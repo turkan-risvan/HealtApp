@@ -1,12 +1,11 @@
-import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:healt_app/view/common/common_text_field.dart';
 import 'package:healt_app/viewmodel/register_viewmodel.dart';
 import 'package:provider/provider.dart';
 
 class RegisterPage extends StatelessWidget {
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   RegisterPage({super.key});
 
@@ -16,7 +15,7 @@ class RegisterPage extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 228, 247, 245),
       appBar: AppBar(
         backgroundColor: Colors.teal,
-        title: Text("Kayıt Sayfası"),
+        title: const Text("Kayıt Sayfası"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -24,11 +23,11 @@ class RegisterPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             _buildEmailTextField(),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             _buildPasswordTextField(),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             _buildLoginButton(context),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             _buildOpenRegisterButton(context),
           ],
         ),
@@ -58,9 +57,9 @@ class RegisterPage extends StatelessWidget {
       listen: false,
     );
     return ElevatedButton(
-      child: Text("Kayıt Ol"),
+      child: const Text("Kayıt Ol"),
       style: ElevatedButton.styleFrom(
-        primary: Colors.teal, // Button rengi
+        backgroundColor: Colors.teal, // Button rengi
       ),
       onPressed: () {
         viewModel.register(
@@ -78,10 +77,9 @@ class RegisterPage extends StatelessWidget {
       listen: false,
     );
     return TextButton(
-      child: Text("Hesabınız var mı? Giriş yapın"),
+      child: const Text("Hesabınız var mı? Giriş yapın"),
       onPressed: () {
         viewModel.openLoginPage(context);
-        primary:
         Colors.teal;
       },
     );

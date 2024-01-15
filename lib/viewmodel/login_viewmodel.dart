@@ -1,14 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:healt_app/view/home_page.dart';
-import 'package:healt_app/view/main_page.dart';
 import 'package:healt_app/view/register_page.dart';
 import 'package:healt_app/viewmodel/main_viewmodel.dart';
 import 'package:healt_app/viewmodel/register_viewmodel.dart';
 import 'package:provider/provider.dart';
  
 class LoginViewModel with ChangeNotifier {
-  FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   void login(BuildContext context, String email, String password) async {
     try {
@@ -37,7 +36,7 @@ class LoginViewModel with ChangeNotifier {
     MaterialPageRoute pageRoute = MaterialPageRoute(
       builder: (context) => ChangeNotifierProvider(
         create: (context) => MainViewModel(),
-        child:  HomeScreen(),
+        child:  const HomeScreen(),
       ),
     );
     Navigator.pushReplacement(context, pageRoute);

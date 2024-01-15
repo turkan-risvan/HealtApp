@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:healt_app/view/home_detay_page.dart';
-import 'package:healt_app/view/home_page.dart';
 
 import 'package:healt_app/view/main_page.dart';
 import 'package:healt_app/view/menu_page.dart';
@@ -10,13 +9,13 @@ import 'package:healt_app/view/randevularim_page.dart';
 
 class HomeScreenProvider with ChangeNotifier {
   int _currentIndex = 0;
-  List<Widget> _pages = [
-    HomeScreenDetay(),
+  final List<Widget> _pages = [
+    const HomeScreenDetay(),
 
-   RandevularimScreen(),
-      MainPage(),
+   const RandevularimScreen(),
+      const MainPage(),
    // RandevuTaleplerimScreen(),
-    MenuScreen(),
+    const MenuScreen(),
   ];
 
   int get currentIndex => _currentIndex;

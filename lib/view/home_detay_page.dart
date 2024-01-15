@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HomeScreenDetay extends StatefulWidget {
+  const HomeScreenDetay({super.key});
+
   @override
   _HomeScreenDetayState createState() => _HomeScreenDetayState();
 }
@@ -12,7 +14,7 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Merhaba Türkan',
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
@@ -26,7 +28,7 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 IconButton(
-                  icon: Icon(Icons.search),
+                  icon: const Icon(Icons.search),
                   onPressed: () {
                     showSearch(
                       context: context,
@@ -35,18 +37,18 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
                   },
                 ),
                 IconButton(
-                  icon: Icon(Icons.apps),
+                  icon: const Icon(Icons.apps),
                   onPressed: () {
                     // Uygulama ikonuna tıklanınca yapılacak işlemler
                   },
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Card(
               child: ListTile(
-                leading: Icon(Icons.assignment),
-                title: Text('Aşı Randevusu'),
+                leading: const Icon(Icons.assignment),
+                title: const Text('Aşı Randevusu'),
                 onTap: () {
                   // Aşı randevusu için tıklama işlemleri
                 },
@@ -54,8 +56,8 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
             ),
             Card(
               child: ListTile(
-                leading: Icon(Icons.person),
-                title: Text('Aile Hekiminden Randevu Al'),
+                leading: const Icon(Icons.person),
+                title: const Text('Aile Hekiminden Randevu Al'),
                 onTap: () {
                   // Aile hekiminden randevu al için tıklama işlemleri
                 },
@@ -63,15 +65,15 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
             ),
             Card(
               child: ListTile(
-                leading: Icon(Icons.local_hospital),
-                title: Text('Hastaneden Randevu Al'),
+                leading: const Icon(Icons.local_hospital),
+                title: const Text('Hastaneden Randevu Al'),
                 onTap: () {
                   // Hastaneden randevu al için tıklama işlemleri
                 },
               ),
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Yaklaşan Randevularım',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
@@ -94,8 +96,8 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
   Widget buildTalepKarti() {
     return Card(
       
-      color: Color.fromARGB(255, 10, 255, 226),
-      margin: EdgeInsets.all(16),
+      color: const Color.fromARGB(255, 10, 255, 226),
+      margin: const EdgeInsets.all(16),
       elevation: 2,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -105,7 +107,7 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
+                const Row(
                   children: [
                     Icon(Icons.local_hospital),
                     SizedBox(width: 8),
@@ -113,35 +115,35 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
                   ],
                 ),
                 IconButton(
-                  icon: Icon(Icons.delete),
+                  icon: const Icon(Icons.delete),
                   onPressed: () {
                     // Kartı silme işlemi
                   },
                 ),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Icon(Icons.local_hospital),
                 SizedBox(width: 8),
                 Text('Poliklinik Bilgisi'),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Icon(Icons.info),
                 SizedBox(width: 8),
                 Text('Bilgi Ver'),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Icon(Icons.person),
                 SizedBox(width: 8),
                 Text('Doktor İsmi'),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Icon(Icons.calendar_today),
                 SizedBox(width: 8),
@@ -151,7 +153,7 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
                 ),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Icon(Icons.access_time),
                 SizedBox(width: 8),
@@ -171,7 +173,7 @@ class CustomSearchDelegate extends SearchDelegate {
   List<Widget> buildActions(BuildContext context) {
     return [
       IconButton(
-        icon: Icon(Icons.clear),
+        icon: const Icon(Icons.clear),
         onPressed: () {
           query = '';
         },
@@ -182,7 +184,7 @@ class CustomSearchDelegate extends SearchDelegate {
   @override
   Widget buildLeading(BuildContext context) {
     return IconButton(
-      icon: Icon(Icons.arrow_back),
+      icon: const Icon(Icons.arrow_back),
       onPressed: () {
         close(context, null);
       },

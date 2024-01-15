@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RandevularimScreen extends StatefulWidget {
+  const RandevularimScreen({super.key});
+
   @override
   _RandevularimScreenState createState() => _RandevularimScreenState();
 }
@@ -19,14 +21,14 @@ class _RandevularimScreenState extends State<RandevularimScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Randevularım'),
+        title: const Text('Randevularım'),
         centerTitle: true,
       ),
       body: Column(
         children: [
           TabBar(
             controller: _tabController,
-            tabs: [
+            tabs: const [
               Tab(text: 'Randevular'),
               Tab(text: 'Geçmiş Randevular'),
               Tab(text: 'Gizli Randevular'),
@@ -38,7 +40,7 @@ class _RandevularimScreenState extends State<RandevularimScreen>
               children: [
                   Column(
                     children: [
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                                 buildRandevuCard(
                                   '12 Ocak 2024',
                                   Icons.access_time,
@@ -58,7 +60,7 @@ class _RandevularimScreenState extends State<RandevularimScreen>
                   ),
                    Column(
                     children: [
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                                 buildRandevuCard(
                                   '12 Ocak 2024',
                                   Icons.access_time,
@@ -77,7 +79,7 @@ class _RandevularimScreenState extends State<RandevularimScreen>
                   ),
                    Column(
                     children: [
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                                 buildRandevuCard(
                                   '12 Ocak 2024',
                                   Icons.access_time,
@@ -106,9 +108,9 @@ class _RandevularimScreenState extends State<RandevularimScreen>
  
   Widget buildKart(String title) {
     return Card(
-       color: Color.fromARGB(255, 10, 255, 226),
+       color: const Color.fromARGB(255, 10, 255, 226),
       elevation: 2,
-      margin: EdgeInsets.all(16),
+      margin: const EdgeInsets.all(16),
       child: SizedBox(
         width: 120,
         child: Padding(
@@ -117,7 +119,7 @@ class _RandevularimScreenState extends State<RandevularimScreen>
             children: [
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                 ),
@@ -143,7 +145,7 @@ class _RandevularimScreenState extends State<RandevularimScreen>
   ) {
     return Card(
       elevation: 2,
-      margin: EdgeInsets.all(16),
+      margin: const EdgeInsets.all(16),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -152,38 +154,38 @@ class _RandevularimScreenState extends State<RandevularimScreen>
             Row(
               children: [
                 Text(date),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
                 Icon(timeIcon),
                 Text(time),
               ],
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(hospital),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Row(
               children: [
                 Icon(doctorIcon),
                 Text(doctor),
               ],
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Row(
               children: [
                 Icon(positionIcon),
                 Text(position),
               ],
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Row(
               children: [
                 Icon(departmentIcon),
                 Text(department),
               ],
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(type),
 
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
 
               Row(children: [
  buildKart('Aynı Hekimden Randevular'),

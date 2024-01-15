@@ -16,7 +16,7 @@ class SplashPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width * 0.5,
           height: MediaQuery.of(context).size.width * 0.5,
           child: Lottie.asset('assets/Animation - 1704713411549.json'),

@@ -7,9 +7,9 @@ import 'package:healt_app/viewmodel/add_person_viewmodel.dart';
 import 'package:provider/provider.dart';
  
 class MainViewModel with ChangeNotifier {
-  FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  List<Person> _persons = [];
+  final List<Person> _persons = [];
 
 
   List<Person> get persons => _persons;

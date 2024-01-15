@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:healt_app/view/main_page.dart';
 
 class RandevuTaleplerimScreen extends StatelessWidget {
+  const RandevuTaleplerimScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Randevu Taleplerim'),
+        title: const Text('Randevu Taleplerim'),
         centerTitle: true,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
      
-          Padding(
-            padding: const EdgeInsets.all(16.0),
+          const Padding(
+            padding: EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -50,8 +51,8 @@ class RandevuTaleplerimScreen extends StatelessWidget {
 
   Widget buildTalepKarti() {
     return Card(
-       color: Color.fromARGB(255, 10, 255, 226),
-      margin: EdgeInsets.all(16),
+       color: const Color.fromARGB(255, 10, 255, 226),
+      margin: const EdgeInsets.all(16),
       elevation: 2,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -61,7 +62,7 @@ class RandevuTaleplerimScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
+                const Row(
                   children: [
                     Icon(Icons.local_hospital),
                     SizedBox(width: 8),
@@ -69,7 +70,7 @@ class RandevuTaleplerimScreen extends StatelessWidget {
                   ],
                 ),
                 IconButton(
-                  icon: Icon(Icons.delete),
+                  icon: const Icon(Icons.delete),
                   onPressed: () {
                     
                     // Kartı silme işlemi
@@ -77,28 +78,28 @@ class RandevuTaleplerimScreen extends StatelessWidget {
                 ),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Icon(Icons.local_hospital),
                 SizedBox(width: 8),
                 Text('Poliklinik Bilgisi'),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Icon(Icons.info),
                 SizedBox(width: 8),
                 Text('Bilgi Ver'),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Icon(Icons.person),
                 SizedBox(width: 8),
                 Text('Doktor İsmi'),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Icon(Icons.calendar_today),
                 SizedBox(width: 8),
@@ -108,7 +109,7 @@ class RandevuTaleplerimScreen extends StatelessWidget {
                 ),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Icon(Icons.access_time),
                 SizedBox(width: 8),

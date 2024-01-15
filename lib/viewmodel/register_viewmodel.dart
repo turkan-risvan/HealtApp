@@ -7,7 +7,7 @@ import 'package:healt_app/viewmodel/main_viewmodel.dart';
 import 'package:provider/provider.dart';
  
 class RegisterViewModel with ChangeNotifier {
-  FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   void register(BuildContext context, String email, String password) async {
     try {
@@ -35,7 +35,7 @@ class RegisterViewModel with ChangeNotifier {
     MaterialPageRoute pageRoute = MaterialPageRoute(
       builder: (context) => ChangeNotifierProvider(
         create: (context) => MainViewModel(),
-        child: MainPage(),
+        child: const MainPage(),
       ),
     );
     Navigator.pushReplacement(context, pageRoute);

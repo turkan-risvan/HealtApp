@@ -51,7 +51,7 @@ class RandevuTaleplerimScreen extends StatelessWidget {
 
   Widget buildTalepKarti() {
     return Card(
-       color: const Color.fromARGB(255, 10, 255, 226),
+      color: const Color(0xFF00D3BE),
       margin: const EdgeInsets.all(16),
       elevation: 2,
       child: Padding(
@@ -72,8 +72,7 @@ class RandevuTaleplerimScreen extends StatelessWidget {
                 IconButton(
                   icon: const Icon(Icons.delete),
                   onPressed: () {
-                    
-                    // Kartı silme işlemi
+                 
                   },
                 ),
               ],

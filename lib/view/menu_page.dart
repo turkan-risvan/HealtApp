@@ -17,7 +17,7 @@ class MenuScreen extends StatelessWidget {
             child: Row(
               children: [
                 CircleAvatar(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Color(0xFF00D3BE),
                   child: Text(
                     'TR',
                     style: TextStyle(
@@ -64,7 +64,7 @@ class MenuScreen extends StatelessWidget {
     return GestureDetector(
       
       child: Card(
-        color: const Color.fromARGB(255, 10, 255, 226),
+      color:const Color(0xFF00D3BE),
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Row(

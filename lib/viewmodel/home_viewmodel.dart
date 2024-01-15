@@ -4,6 +4,7 @@ import 'package:healt_app/view/home_detay_page.dart';
 
 import 'package:healt_app/view/main_page.dart';
 import 'package:healt_app/view/menu_page.dart';
+import 'package:healt_app/view/randevu_talep_page.dart';
 
 import 'package:healt_app/view/randevularim_page.dart';
 
@@ -14,8 +15,8 @@ class HomeScreenProvider with ChangeNotifier {
 
    const RandevularimScreen(),
       const MainPage(),
-   // RandevuTaleplerimScreen(),
-    const MenuScreen(),
+   RandevuTaleplerimScreen(),
+    //const MenuScreen(),
   ];
 
   int get currentIndex => _currentIndex;

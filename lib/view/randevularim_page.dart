@@ -7,8 +7,7 @@ class RandevularimScreen extends StatefulWidget {
   _RandevularimScreenState createState() => _RandevularimScreenState();
 }
 
-class _RandevularimScreenState extends State<RandevularimScreen>
-    with SingleTickerProviderStateMixin {
+class _RandevularimScreenState extends State<RandevularimScreen> with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -38,65 +37,60 @@ class _RandevularimScreenState extends State<RandevularimScreen>
             child: TabBarView(
               controller: _tabController,
               children: [
-                  Column(
-                    children: [
-                      const SizedBox(height: 16),
-                                buildRandevuCard(
-                                  '12 Ocak 2024',
-                                  Icons.access_time,
-                                  '14:30',
-                                  'Hastane İsmi',
-                                  Icons.person,
-                                  'Dr. Doktor İsmi',
-                                  Icons.local_hospital,
-                                  'Pozisyon',
-                                  Icons.healing,
-                                  'Hekimlik',
-                                  'Muayene',
-                                  
-                                ),
-                              
-                    ],
-                  ),
-                   Column(
-                    children: [
-                      const SizedBox(height: 16),
-                                buildRandevuCard(
-                                  '12 Ocak 2024',
-                                  Icons.access_time,
-                                  '14:30',
-                                  'Hastane İsmi',
-                                  Icons.person,
-                                  'Dr. Doktor İsmi',
-                                  Icons.local_hospital,
-                                  'Pozisyon',
-                                  Icons.healing,
-                                  'Hekimlik',
-                                  'Muayene',
-                                ),
-                               
-                    ],
-                  ),
-                   Column(
-                    children: [
-                      const SizedBox(height: 16),
-                                buildRandevuCard(
-                                  '12 Ocak 2024',
-                                  Icons.access_time,
-                                  '14:30',
-                                  'Hastane İsmi',
-                                  Icons.person,
-                                  'Dr. Doktor İsmi',
-                                  Icons.local_hospital,
-                                  'Pozisyon',
-                                  Icons.healing,
-                                  'Hekimlik',
-                                  'Muayene',
-                                ),
-                               
-                    ],
-                  ),
-       
+                Column(
+                  children: [
+                    const SizedBox(height: 16),
+                    buildRandevuCard(
+                      '12 Ocak 2024',
+                      Icons.access_time,
+                      '14:30',
+                      'Hastane İsmi',
+                      Icons.person,
+                      'Dr. Doktor İsmi',
+                      Icons.local_hospital,
+                      'Pozisyon',
+                      Icons.healing,
+                      'Hekimlik',
+                      'Muayene',
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    const SizedBox(height: 16),
+                    buildRandevuCard(
+                      '12 Ocak 2024',
+                      Icons.access_time,
+                      '14:30',
+                      'Hastane İsmi',
+                      Icons.person,
+                      'Dr. Doktor İsmi',
+                      Icons.local_hospital,
+                      'Pozisyon',
+                      Icons.healing,
+                      'Hekimlik',
+                      'Muayene',
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    const SizedBox(height: 16),
+                    buildRandevuCard(
+                      '12 Ocak 2024',
+                      Icons.access_time,
+                      '14:30',
+                      'Hastane İsmi',
+                      Icons.person,
+                      'Dr. Doktor İsmi',
+                      Icons.local_hospital,
+                      'Pozisyon',
+                      Icons.healing,
+                      'Hekimlik',
+                      'Muayene',
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -105,10 +99,9 @@ class _RandevularimScreenState extends State<RandevularimScreen>
     );
   }
 
- 
   Widget buildKart(String title) {
     return Card(
-       color: const Color.fromARGB(255, 10, 255, 226),
+      color: const Color(0xFF00D3BE),
       elevation: 2,
       margin: const EdgeInsets.all(16),
       child: SizedBox(
@@ -124,13 +117,14 @@ class _RandevularimScreenState extends State<RandevularimScreen>
                   fontSize: 16,
                 ),
               ),
-              // Diğer içerikler buraya eklenir
             ],
           ),
         ),
       ),
     );
-  }  Widget buildRandevuCard(
+  }
+
+  Widget buildRandevuCard(
     String date,
     IconData timeIcon,
     String time,
@@ -184,43 +178,16 @@ class _RandevularimScreenState extends State<RandevularimScreen>
             ),
             const SizedBox(height: 8),
             Text(type),
-
-              const SizedBox(height: 16),
-
-              Row(children: [
- buildKart('Aynı Hekimden Randevular'),
-                                    buildKart('Gizli Randevular'),
-              ],),
-                             
+            const SizedBox(height: 16),
+            Row(
+              children: [
+                buildKart('Aynı Hekimden Randevular'),
+                buildKart('Gizli Randevular'),
+              ],
+            ),
           ],
         ),
       ),
     );
   }
-
-  // Widget buildKart(String title) {
-  //   return Card(
-  //     elevation: 2,
-  //     margin: EdgeInsets.all(16),
-  //     child: Padding(
-  //       padding: const EdgeInsets.all(16.0),
-  //       child: Column(
-  //         children: [
-  //           Text(
-  //             title,
-  //             style: TextStyle(
-  //               fontWeight: FontWeight.bold,
-  //               fontSize: 18,
-  //             ),
-  //           ),
-  //           // Diğer içerikler buraya eklenir
-  //         ],
-  //       ),
-  //     ),
-  //   );
-  // }
-
-
 }
-
- 

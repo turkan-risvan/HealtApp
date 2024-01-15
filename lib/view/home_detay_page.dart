@@ -39,7 +39,7 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
                 IconButton(
                   icon: const Icon(Icons.apps),
                   onPressed: () {
-                    // Uygulama ikonuna tıklanınca yapılacak işlemler
+                    
                   },
                 ),
               ],
@@ -50,7 +50,7 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
                 leading: const Icon(Icons.assignment),
                 title: const Text('Aşı Randevusu'),
                 onTap: () {
-                  // Aşı randevusu için tıklama işlemleri
+                 
                 },
               ),
             ),
@@ -59,7 +59,6 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
                 leading: const Icon(Icons.person),
                 title: const Text('Aile Hekiminden Randevu Al'),
                 onTap: () {
-                  // Aile hekiminden randevu al için tıklama işlemleri
                 },
               ),
             ),
@@ -68,7 +67,7 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
                 leading: const Icon(Icons.local_hospital),
                 title: const Text('Hastaneden Randevu Al'),
                 onTap: () {
-                  // Hastaneden randevu al için tıklama işlemleri
+                  
                 },
               ),
             ),
@@ -79,7 +78,7 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
             ),
               Expanded(
             child: ListView.builder(
-              itemCount: 5, // Kart sayısı
+              itemCount: 5, 
               itemBuilder: (context, index) {
                 return buildTalepKarti();
               },
@@ -96,7 +95,7 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
   Widget buildTalepKarti() {
     return Card(
       
-      color: const Color.fromARGB(255, 10, 255, 226),
+      color: const Color(0xFF00D3BE),
       margin: const EdgeInsets.all(16),
       elevation: 2,
       child: Padding(
@@ -117,7 +116,7 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
                 IconButton(
                   icon: const Icon(Icons.delete),
                   onPressed: () {
-                    // Kartı silme işlemi
+                  
                   },
                 ),
               ],
@@ -167,7 +166,7 @@ class _HomeScreenDetayState extends State<HomeScreenDetay> {
   }
 
 class CustomSearchDelegate extends SearchDelegate {
-  List<String> searchResults = []; // Buraya taşıdık
+  List<String> searchResults = []; 
 
   @override
   List<Widget> buildActions(BuildContext context) {
@@ -208,7 +207,7 @@ class CustomSearchDelegate extends SearchDelegate {
         return ListTile(
           title: Text(searchResults[index]),
           onTap: () {
-            // Seçilen öğe için tıklama işlemleri
+            
           },
         );
       },

@@ -19,9 +19,7 @@ class AppColor {
 class ConstantsColor {
   static const bottomNavColor = Color(0xff1f2847);
   static const bodyColor = Color(0xffd9f0fd);
-
   static const lightGreyColor = Color(0xfff5f5f5);
-
   static const purpleColor = Color(0xffb293ed);
   static const lightPurpleColor = Color(0xffe1d7fc);
   static const greenColor = Color(0xffe5fbec);
@@ -30,7 +28,6 @@ class ConstantsColor {
 
   static const pinkColor = Color(0xfffcd6da);
   static const lightPinkColor = Color(0xfffcebed);
-  //static const redColor = const Color(0xffee6463);
   static const blueColor = Color(0xff2477fd);
   static const lightblueColor = Color(0xfff6fafd);
 }

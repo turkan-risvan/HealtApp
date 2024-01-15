@@ -20,7 +20,7 @@ class AddPersonPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Column(
               children: [
@@ -33,6 +33,7 @@ class AddPersonPage extends StatelessWidget {
                 _buildMuayeneTextField(),
               ],
             ),
+              const SizedBox(height: 40),
             _buildAddPersonButton(context),
           ],
         ),
@@ -74,7 +75,12 @@ class AddPersonPage extends StatelessWidget {
       listen: false,
     );
     return ElevatedButton(
-      child: const Text("Randevu Ekle"),
+      child:Text("Randevu Ekle",style: TextStyle(color: Colors.white,),),
+      style: ElevatedButton.styleFrom(
+    backgroundColor: const Color(0xFF00D3BE),
+    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15), 
+    fixedSize: const Size(200, 50), 
+  ),
       onPressed: () {
         viewModel.addPerson(
           context,

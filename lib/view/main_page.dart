@@ -17,7 +17,8 @@ class MainPage extends StatelessWidget {
       ),
       body: _buildBody(),
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
+       backgroundColor: const Color(0xFF00D3BE),
+        child: const Icon(Icons.add,color: Colors.white,),
         onPressed: () {
           viewModel.openAddPersonPage(context);
         },
@@ -31,7 +32,7 @@ class MainPage extends StatelessWidget {
         itemCount: viewModel.persons.length,
         itemBuilder: (BuildContext context, int index) {
           return Card(
-       color: const Color.fromARGB(255, 10, 255, 226),
+       color: const Color(0xFF00D3BE),
       margin: const EdgeInsets.all(16),
     
       child: Padding(
@@ -52,7 +53,7 @@ class MainPage extends StatelessWidget {
                 IconButton(
                   icon: const Icon(Icons.delete),
                   onPressed: () {
-                    // Kartı silme işlemi
+                 
                   },
                 ),
               ],

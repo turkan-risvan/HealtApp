@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:healt_app/view/common/common_text_field.dart';
 import 'package:healt_app/viewmodel/register_viewmodel.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -12,25 +13,48 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 228, 247, 245),
+     backgroundColor: const Color.fromARGB(255, 228, 247, 245),
       appBar: AppBar(
-        backgroundColor: Colors.teal,
+        backgroundColor: const Color(0xFF00D3BE),
         title: const Text("Kayıt Sayfası"),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _buildEmailTextField(),
-            const SizedBox(height: 16),
-            _buildPasswordTextField(),
-            const SizedBox(height: 24),
-            _buildLoginButton(context),
-            const SizedBox(height: 8),
-            _buildOpenRegisterButton(context),
-          ],
+      body: Column(
+        children: [
+           const SizedBox(height: 40,),
+                       SizedBox(
+          width: MediaQuery.of(context).size.width * 0.5,
+          height: MediaQuery.of(context).size.width * 0.5,
+          child: Lottie.asset('assets/Animation - 1704713411549.json'),
         ),
+       const SizedBox(height: 30,),
+          Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: Center(
+              child: Container(
+                 height: 370,
+                        decoration: BoxDecoration(color: Colors.white,
+                        border: Border.all(color: const Color(0xFF00D3BE).withOpacity(0.2)),
+                        borderRadius: BorderRadius.circular(15)),
+                       
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _buildEmailTextField(),
+                        const SizedBox(height: 40),
+                      _buildPasswordTextField(),
+                      const SizedBox(height: 50),
+                      _buildLoginButton(context),
+                      const SizedBox(height: 40),
+                      _buildOpenRegisterButton(context),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -57,10 +81,12 @@ class RegisterPage extends StatelessWidget {
       listen: false,
     );
     return ElevatedButton(
-      child: const Text("Kayıt Ol"),
-      style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.teal, // Button rengi
-      ),
+      child:Text("Kayıt Ol",style: TextStyle(color: Colors.white,),),
+     style: ElevatedButton.styleFrom(
+    backgroundColor: const Color(0xFF00D3BE),
+    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15), 
+    fixedSize: const Size(200, 50),
+  ),
       onPressed: () {
         viewModel.register(
           context,
@@ -77,10 +103,10 @@ class RegisterPage extends StatelessWidget {
       listen: false,
     );
     return TextButton(
-      child: const Text("Hesabınız var mı? Giriş yapın"),
+      child: const Text("Hesabınız var mı? Giriş yapın",style: TextStyle(color: Color(0xFF00D3BE)),),
       onPressed: () {
         viewModel.openLoginPage(context);
-        Colors.teal;
+        
       },
     );
   }
